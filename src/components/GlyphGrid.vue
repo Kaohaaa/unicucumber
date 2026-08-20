@@ -1419,6 +1419,7 @@ defineExpose({
   inset: 0 auto auto 0;
   transform-origin: 0 0;
   will-change: transform;
+  color: var(--text-color);
   -webkit-touch-callout: none;
   user-select: none;
 }
@@ -1450,12 +1451,12 @@ defineExpose({
 }
 
 .cell {
-  background: white;
+  background: var(--glyph-background-color);
   box-shadow: inset 0 0 0 0.3px var(--primary-darker);
 }
 
 .cell.filled {
-  background: black;
+  background: var(--glyph-foreground-color);
 }
 
 .cell:not(.bordered) {
@@ -1466,13 +1467,13 @@ defineExpose({
 .preview-cell {
   position: absolute;
   z-index: 4;
-  background: black;
+  background: var(--glyph-foreground-color);
   opacity: 0.72;
   pointer-events: none;
 }
 
 .preview-cell.erase {
-  background: white;
+  background: var(--glyph-background-color);
   box-shadow: inset 0 0 0 1px var(--danger-color);
 }
 
@@ -1501,12 +1502,12 @@ defineExpose({
 .paste-cell {
   width: var(--cell-size);
   height: var(--cell-size);
-  background: white;
+  background: var(--glyph-background-color);
   box-shadow: inset 0 0 0 0.3px var(--primary-darker);
 }
 
 .paste-cell.filled {
-  background: black;
+  background: var(--glyph-foreground-color);
 }
 
 .context-toolbar {

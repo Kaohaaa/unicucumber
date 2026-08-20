@@ -13,6 +13,9 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from 'vue'
 
+import { useSettings } from '@/composables/useSettings'
+import { useTheme } from '@/composables/useTheme'
+
 const props = defineProps({
   hexValue: {
     type: String,
@@ -24,11 +27,25 @@ const props = defineProps({
   },
   displayMode: {
     type: String,
-    default: 'list', // 'list', 'editor'
+    default: 'list', // 'list', 'editor', 'dialog'
   },
 })
 
+const { resolvedTheme } = useTheme()
+const { settings } = useSettings()
 const canvas = ref<HTMLCanvasElement | null>(null)
+
+const activeGlyphColors = computed(() =>
+  resolvedTheme.value === 'dark'
+    ? {
+        background: settings.value.darkGlyphBackgroundColor,
+        foreground: settings.value.darkGlyphForegroundColor,
+      }
+    : {
+        background: settings.value.lightGlyphBackgroundColor,
+        foreground: settings.value.lightGlyphForegroundColor,
+      },
+)
 
 const getCanvasWidth = computed(() => {
   const scale = props.displayMode === 'editor' ? 2 : 3
@@ -45,11 +62,15 @@ const drawGlyph = () => {
   const ctx = canvas.value.getContext('2d', {
     alpha: false,
     willReadFrequently: false,
-  }) as CanvasRenderingContext2D
+  })
+  if (!ctx) return
+
+  const { background: backgroundColor, foreground: foregroundColor } =
+    activeGlyphColors.value
 
   try {
     ctx.clearRect(0, 0, props.width, 16)
-    ctx.fillStyle = 'white'
+    ctx.fillStyle = backgroundColor
     ctx.fillRect(0, 0, props.width, 16)
 
     const expectedLength = (props.width * 16) / 4
@@ -63,7 +84,7 @@ const drawGlyph = () => {
       return
     }
 
-    ctx.fillStyle = 'black'
+    ctx.fillStyle = foregroundColor
     for (let i = 0; i < props.width * 16; i++) {
       const nibble = Number.parseInt(
         props.hexValue.charAt(Math.floor(i / 4)),
@@ -78,7 +99,7 @@ const drawGlyph = () => {
   } catch (error) {
     console.warn('PixelPreview drawGlyph error:', error)
     try {
-      ctx.fillStyle = 'white'
+      ctx.fillStyle = backgroundColor
       ctx.fillRect(0, 0, props.width, 16)
     } catch (fallbackError) {
       console.error('PixelPreview fallback draw error:', fallbackError)
@@ -91,7 +112,7 @@ onMounted(() => {
 })
 
 watch(
-  [() => props.hexValue, () => props.width],
+  [() => props.hexValue, () => props.width, activeGlyphColors],
   () => {
     drawGlyph()
   },
@@ -102,19 +123,7 @@ watch(
 <style scoped>
 canvas {
   image-rendering: pixelated;
-  background: white;
+  background-color: var(--glyph-preview-background);
   flex: none;
-}
-
-.preview-grid {
-  background-color: var(--background-light);
-}
-
-.preview-cell {
-  border: 1px solid var(--border-color);
-}
-
-.preview-cell.filled {
-  background-color: var(--text-color);
 }
 </style>

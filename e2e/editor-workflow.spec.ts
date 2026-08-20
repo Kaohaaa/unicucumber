@@ -360,6 +360,14 @@ test(
       !testInfo.project.name.includes('phone'),
       'mobile command surface',
     )
+    await page.evaluate(() => {
+      document.documentElement.dataset.theme = 'dark'
+      document.documentElement.style.colorScheme = 'dark'
+    })
+    const filledCell = page.locator('[data-row="0"][data-col="0"]')
+    await filledCell.click()
+    await expect(filledCell).toHaveClass(/filled/)
+
     await page.locator('.mobile-command-bar .toolbar-tool--select').click()
     const first = await cellCenter(page, 0, 0)
     const last = await cellCenter(page, 1, 1)
@@ -391,6 +399,18 @@ test(
     await expect(
       pasteToolbar.getByRole('button', { name: 'Cancel', exact: true }),
     ).toBeVisible()
+
+    const pasteCells = page.locator('.paste-cell')
+    await expect(pasteCells).toHaveCount(4)
+    await expect(page.locator('.paste-cell.filled')).toHaveCount(1)
+    await expect(page.locator('.paste-cell:not(.filled)').first()).toHaveCSS(
+      'background-color',
+      'rgb(51, 51, 51)',
+    )
+    await expect(page.locator('.paste-cell.filled')).toHaveCSS(
+      'background-color',
+      'rgb(224, 224, 224)',
+    )
   },
 )
 
@@ -405,6 +425,14 @@ test(
     await page.getByRole('button', { name: 'Open settings' }).click()
     const settings = page.getByRole('dialog').last()
     await expect(settings).toBeVisible()
+    await expect(settings.locator('.glyph-color-theme')).toHaveCount(2)
+    expect(
+      await settings
+        .locator('.glyph-color-themes')
+        .evaluate((element) =>
+          getComputedStyle(element).gridTemplateColumns.trim().split(/\s+/),
+        ),
+    ).toHaveLength(1)
     const settingsBounds = await settings.boundingBox()
     expect(settingsBounds?.height ?? Infinity).toBeLessThanOrEqual(
       page.viewportSize()?.height ?? 0,
