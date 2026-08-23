@@ -3,13 +3,13 @@
     "batch_delete": {
       "confirm": "刪",
       "message": "誠欲刪所擇 {count} 字形？",
-      "title": "誠刪之"
+      "title": "刪除審決"
     },
     "cancel": "罷",
     "clear_confirm": {
       "confirm": "清",
       "message": "誠欲清其柵乎？",
-      "title": "誠清之"
+      "title": "清除審決"
     },
     "confirm": "然",
     "dimension_error": {
@@ -34,7 +34,7 @@
     "select_all": "悉擇之",
     "settings_reset": {
       "confirm": "重設",
-      "message": "誠欲悉重設如預設？",
+      "message": "誠欲悉重設如豫設？",
       "title": "重設置設"
     },
     "unsaved_changes": {
@@ -63,7 +63,7 @@
       },
       "save": {
         "button": "存字形",
-        "title": "存此形至司形儀 （Ctrl並S）"
+        "title": "存此形至司形 （Ctrl並S）"
       },
       "show_encoding_info": "示編碼",
       "undo": {
@@ -103,7 +103,7 @@
       "clear_button": "清",
       "code_point": "書萬國碼位",
       "hex_value": "書十六進形錄（三十二抑六十四位）",
-      "preview": "預覽字形",
+      "preview": "豫覽字形",
       "update_button": "迭新字形"
     },
     "backup_exported": "字庫備份既錄出。",
@@ -186,8 +186,8 @@
     "hex_invalid_title": "幾許十六進碼未錄入",
     "import": "閲於萬國碼字體",
     "library": {
-      "add_selected_to_manager": "增至司形儀（{count}）",
-      "added_to_manager": "既增 {count} 字形至司形儀。",
+      "add_selected_to_manager": "增至司形（{count}）",
+      "added_to_manager": "既增 {count} 字形至司形。",
       "cell_accessible": "{character}，U+{codePoint}，{width}像素字形{states}",
       "clear_search": "清除求索",
       "clear_selection": "清除所擇",
@@ -199,8 +199,8 @@
       "density_label": "字形柵之疏密",
       "entered_fullscreen": "全幕字庫既開。",
       "exit_fullscreen": "離全幕之覽",
-      "exited_fullscreen": "既返司形儀之側欄。",
-      "expand": "展司形儀",
+      "exited_fullscreen": "既返司形之側欄。",
+      "expand": "展司形",
       "filtered_count": "{total} 之 {filtered}",
       "filters": "濾",
       "glyph_count": "{count} 字形",
@@ -212,12 +212,12 @@
       "modified_badge": "既改",
       "no_matches": "無字形相匹",
       "no_matches_hint": "清除求索，抑或另試碼位。",
-      "remove_from_manager": "除於司形儀（{count}）",
+      "remove_from_manager": "除於司形（{count}）",
       "retry": "復試",
       "scrollbar_label": "字庫卷",
       "search_label": "字庫求索",
       "select_filtered": "擇所濾字形",
-      "selected_count": "既擇{count}",
+      "selected_count": "既擇 {count}",
       "selection_mode": "擇以增之",
       "source": {
         "all": "無遺",
@@ -256,7 +256,7 @@
     "sheet_columns": "列數",
     "sheet_exported": "位圖表既錄出（{columns} 列，{scale}倍幅）。",
     "sheet_scale": "像素尺寸",
-    "title": "司形儀",
+    "title": "司形",
     "upload": {
       "clipboard_failed": "無以閲簿中之圖。",
       "drop_hint": "亦可曳十六進碼案抑圖案於此。",
@@ -316,7 +316,7 @@
     "operation_subtract": "剔",
     "redo": "復組字",
     "redo_short": "復",
-    "save": "存至司形儀",
+    "save": "存至司形",
     "select_layer": "擇{name}",
     "show": "顯",
     "show_layer": "顯{name}",
@@ -327,11 +327,11 @@
     "unlock_layer": "解{name}"
   },
   "header": {
-    "close_glyph_manager": "關司形儀",
+    "close_glyph_manager": "關司形",
     "github": "開「匯翠」之庫於技閣",
     "open_composition": "開組字坊",
     "open_composition_16_only": "組字坊須橫縱十六之字形",
-    "open_glyph_manager": "開司形儀",
+    "open_glyph_manager": "開司形",
     "open_settings": "開置設",
     "open_text_preview": "開文覽",
     "title_cucumber": "翠",
@@ -360,7 +360,7 @@
     "loading": "方載圖⋯",
     "mode": "法式",
     "prepared": "既化圖式，書碼位以成哉。",
-    "preview": "所化字形預覽",
+    "preview": "所化字形豫覽",
     "target_width": "字幅",
     "threshold": "黑色之閾",
     "title": "化圖爲字",
@@ -400,7 +400,7 @@
     "move_left": "左",
     "move_right": "右",
     "move_up": "上",
-    "paste_actions": "謄貼預覽"
+    "paste_actions": "謄貼豫覽"
   },
   "settings": {
     "always_show_mouse_cursor": "恆示光標",
@@ -430,17 +430,17 @@
       "single_button": "左擊繪除"
     },
     "enable_selection": "啟擇術",
-    "export_defaults": "錄出預設",
+    "export_defaults": "錄出豫設",
     "export_scale": "圖幅",
     "export_transparent": "通透背幕",
     "font_edit": {
       "cancel": "罷",
       "save": "存",
-      "title": "纂預覽字體"
+      "title": "纂豫覽字體"
     },
     "glyph_library_density": "字庫疏密",
-    "glyph_manager_push_editor": "示纂具於司形儀之側",
-    "glyph_manager_push_editor_hint": "寬幕者，司形儀形變，則纂域隨變，不爲所蔽。",
+    "glyph_manager_push_editor": "示纂具於司形之側",
+    "glyph_manager_push_editor_hint": "寬幕者，司形形變，則纂域隨變，不爲所蔽。",
     "preserve_glyph_library_filters": "擇字後存字庫選限",
     "preserve_glyph_library_filters_hint": "復入字庫時，存所索、所自、層面及區域之限。",
     "glyph_preview": {
@@ -455,14 +455,14 @@
       "foreground": "前幕",
       "input_label": "{theme}式{color}",
       "label": "字色",
-      "restore_defaults": "回復預設"
+      "restore_defaults": "回復豫設"
     },
     "glyph_width": {
       "16px": "十六像素",
       "8px": "八像素",
       "label": "字寬"
     },
-    "image_import_defaults": "圖錄預設",
+    "image_import_defaults": "圖錄豫設",
     "image_import_mode": "法式",
     "image_import_threshold": "黑色之閾",
     "image_import_transparent_white": "視空爲白",
@@ -485,7 +485,7 @@
     "sections": {
       "canvas": "卷工",
       "general": "常",
-      "glyph_preview": "預覽暨字庫",
+      "glyph_preview": "豫覽暨字庫",
       "import_export": "錄",
       "safety": "安虞",
       "updates": "迭新",
@@ -515,19 +515,19 @@
     "status_unsaved": "未存"
   },
   "text_preview": {
-    "close": "關預覽",
-    "empty": "書文以預覽之。",
+    "close": "關豫覽",
+    "empty": "書文以豫覽之。",
     "hint": "據現存萬國碼點陣字形所成也。",
-    "input_label": "預覽",
-    "live_hint": "君之所纂、形司所改，皆自現於此。",
+    "input_label": "豫覽",
+    "live_hint": "君之所纂、司形所改，皆自現於此。",
     "load_failed": "萬國碼字體未能盡數載焉。",
     "loading": "方載字形⋯",
     "missing": "闕 {count} 字形",
     "placeholder": "題文一至數行",
-    "preview_label": "萬國碼字體預覽：{text}",
+    "preview_label": "萬國碼字體豫覽：{text}",
     "sample": "寄蜉蝣于天地，渺滄海之一粟。",
     "scale": "尺寸",
-    "title": "預覽"
+    "title": "豫覽"
   },
   "title": "「匯翠」- 纂萬國碼字體",
   "tools": {

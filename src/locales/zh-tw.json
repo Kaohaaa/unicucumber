@@ -24,7 +24,7 @@
     "hex_import": {
       "cancel": "跳過",
       "confirm": "更新選中字形",
-      "message": "以下字形已存在，請選擇要更新的字形：",
+      "message": "以下字形已存在，請選取要更新的字形：",
       "title": "發現重複的字形"
     },
     "image_error": {
@@ -239,7 +239,7 @@
         "14": "平面14 · 特別用途補充平面（SSP）",
         "15": "平面15 · 私用區A",
         "16": "平面16 · 私用區B",
-        "all": "選擇平面"
+        "all": "選取平面"
       },
       "unicode_plane_label": "Unicode平面",
       "workspace_label": "全螢幕字形庫"
@@ -356,7 +356,7 @@
     "fit": "完整適配",
     "imported": "圖片已匯入為字形。",
     "invert": "黑白反轉",
-    "load_failed": "無法處理所選圖片，請選擇其他圖片。",
+    "load_failed": "無法處理所選圖片，請選取其他圖片。",
     "loading": "正在處理圖片…",
     "mode": "縮放方式",
     "prepared": "圖片已轉換，請輸入或確認碼位以完成匯入。",
@@ -472,7 +472,7 @@
     "local_font": {
       "active": "本機字體：{name}",
       "import": "匯入本機字體",
-      "import_failed": "無法載入此字體檔案。請選擇有效的 TTF、OTF、WOFF 或 WOFF2 字體。",
+      "import_failed": "無法載入此字體檔案。請選取有效的 TTF、OTF、WOFF 或 WOFF2 字體。",
       "priority_hint": "此本機字體永遠優先；下方清單仍作為後備字體堆疊。",
       "remove": "移除",
       "remove_failed": "無法移除已儲存的本機字體。",

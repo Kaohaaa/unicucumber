@@ -157,7 +157,7 @@
         "reset": "Reset metadata for this range",
         "title": "Edit font metadata"
       },
-      "preparing": "Preparing font data…",
+      "preparing": "Preparing font data...",
       "scope": {
         "full": {
           "description": "Official main-font range (U+0000–U+FFFF), with your changes applied.",
@@ -207,8 +207,8 @@
       "grid_label": "Unifont glyph library",
       "inspector_title": "Add / Import",
       "load_failed": "Unable to load your saved glyphs.",
-      "loading": "Loading saved glyphs…",
-      "loading_unifont": "Loading the complete Unifont library…",
+      "loading": "Loading saved glyphs...",
+      "loading_unifont": "Loading the complete Unifont library...",
       "modified_badge": "Modified",
       "no_matches": "No matching glyphs",
       "no_matches_hint": "Clear the search or try another character or code point.",
@@ -251,7 +251,7 @@
       "skip_one": "Skip",
       "title": "Manual Code Point Input Required"
     },
-    "search": "Search code point, character, data, or Unicode name…",
+    "search": "Search code point, character, data, or Unicode name...",
     "select_all": "Select All",
     "sheet_columns": "Columns",
     "sheet_exported": "Bitmap sheet exported ({columns} columns, {scale}× pixel scale).",
@@ -284,7 +284,7 @@
     "components": "Components",
     "component_add": "Add {characters}",
     "component_bounds": "Bounds {bounds}",
-    "component_loading": "Loading components…",
+    "component_loading": "Loading components...",
     "component_no_results": "No matching components.",
     "component_retry": "Retry",
     "component_search": "Search components",
@@ -357,7 +357,7 @@
     "imported": "Image imported as a glyph.",
     "invert": "Invert black and white",
     "load_failed": "The selected image could not be prepared. Choose another image.",
-    "loading": "Preparing image…",
+    "loading": "Preparing image...",
     "mode": "Sizing mode",
     "prepared": "Image converted. Enter or confirm its code point to finish importing.",
     "preview": "Converted pixel glyph preview",
@@ -495,7 +495,7 @@
     "title": "Settings",
     "updates": {
       "check": "Check for updates",
-      "checking": "Checking for updates…",
+      "checking": "Checking for updates...",
       "hint": "Updates save your current draft before they are applied.",
       "version": "App version"
     }
@@ -511,7 +511,7 @@
     "restored_draft": "Your unfinished editing draft has been restored.",
     "status_error": "Save failed",
     "status_saved": "Saved",
-    "status_saving": "Saving…",
+    "status_saving": "Saving...",
     "status_unsaved": "Unsaved"
   },
   "text_preview": {
@@ -521,7 +521,7 @@
     "input_label": "Preview text",
     "live_hint": "Current editor and glyph-manager changes appear here automatically.",
     "load_failed": "Some Unifont glyph data could not be loaded.",
-    "loading": "Loading glyphs…",
+    "loading": "Loading glyphs...",
     "missing": "{count} glyph is unavailable. | {count} glyphs are unavailable.",
     "placeholder": "Type one or more lines of text",
     "preview_label": "Unifont text preview: {text}",
